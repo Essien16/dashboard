@@ -1,0 +1,445 @@
+body {
+    background: #E5E5E5;
+}
+
+/* Heading */
+.main h3 {
+    width: 98px;
+    height: 24px;
+    /* Heading/Small 2 */
+    font-family: 'Söhne';
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: #131316;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Good morning, Blessing ⛅️ */
+.main .greeting h2 {
+    position: absolute;
+    width: 281px;
+    height: 32px;
+    left: 364px;
+    top: 92px;
+    font-family: 'Söhne';
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #131316;
+}
+
+/* Check out your dashboard summary. */
+.main .summary p {
+    position: absolute;
+    width: 228px;
+    height: 22px;
+    left: 364px;
+    top: 134px;
+    font-family: 'Söhne';
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #31373D;
+}
+
+/* view analytics 1 */
+.main .summary h6 {
+    width: 92px;
+    height: 22px;
+    font-family: 'Söhne';
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #FF5403;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Frame 6599 chart */
+.main .page-view {
+    position: absolute;
+    width: 1016px;
+    height: 576px;
+    left: 364px;
+    top: 243px;
+    background: #FFFFFF;
+}
+
+/* Page Views */
+.main .page-view h3 {
+    position: absolute;
+    width: 92px;
+    height: 24px;
+    left: 24px;
+    top: 32px;
+    font-family: 'Söhne';
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #131316;
+}
+
+/* all time */
+.main .page-view p {
+    position: absolute;
+    width: 112.34px;
+    height: 20px;
+    left: 24px;
+    top: 64px;
+    font-family: 'Söhne';
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #4D5760;
+}
+
+/* 500 */
+.main .page-view h1 {
+    position: absolute;
+    width: 88px;
+    height: 58px;
+    left: 24px;
+    top: 108px;
+    font-family: 'Söhne';
+    font-size: 48px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #131316;
+}
+
+/* 1000 */
+#lineChart::before {
+position: absolute;
+width: 32px;
+height: 22px;
+left: 24px;
+top: 198px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760;
+}
+
+/* 800 */
+/* position: absolute;
+width: 26px;
+height: 22px;
+left: 24px;
+top: 254px;
+/* Paragraph/Small
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760; */
+
+/* 600 
+position: absolute;
+width: 26px;
+height: 22px;
+left: 24px;
+top: 318px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760; */
+
+/* 400 
+position: absolute;
+width: 26px;
+height: 22px;
+left: 24px;
+top: 378px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760; */
+
+/* 200
+position: absolute;
+width: 26px;
+height: 22px;
+left: 24px;
+top: 438px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760;
+
+ 0 
+position: absolute;
+width: 9px;
+height: 22px;
+left: 24px;
+top: 498px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760; */
+
+/* 18 Dec */
+#lineChart::before {
+position: absolute;
+width: 42px;
+height: 22px;
+left: 231px;
+top: 532px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760;
+}
+/* 20 Dec
+position: absolute;
+width: 45px;
+height: 22px;
+left: 453px;
+top: 532px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760; */
+
+/* 21 Dec
+position: absolute;
+width: 41px;
+height: 22px;
+left: 567px;
+top: 532px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760; */
+
+/* 22 Dec 
+position: absolute;
+width: 44px;
+height: 22px;
+left: 678px;
+top: 532px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760; */
+
+/* 23 Dec 
+position: absolute;
+width: 44px;
+height: 22px;
+left: 791px;
+top: 532px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760; */
+
+/* 24 Dec 
+position: absolute;
+width: 44px;
+height: 22px;
+left: 904px;
+top: 532px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+color: #4D5760; */
+
+/* Frame 455- top location */
+.main .report .locations .report-title {
+    box-sizing: border-box;
+    position: absolute;
+    width: 500px;
+    height: 326px;
+    left: 362px;
+    top: 843px;
+    background: #FFFFFF;
+    border: 1px solid #EFF1F6;
+    border-radius: 12px; 
+}
+
+/* Top Locations */
+.main .report .locations .report-title h3 {
+    position: absolute;
+    width: 111px;
+    height: 24px;
+    left: 24px;
+    top: 24px;
+    font-family: 'Söhne';
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: #131316;
+}
+
+/* Text Button- view analytics 2 */
+.main .report .locations .report-title p {
+    width: 101px;
+    height: 22px;
+    font-family: 'Söhne';
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #FF5403;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.main .locations .location-data .location-list {
+    width: 87px;
+    height: 24px;
+    font-family: 'Söhne';
+    font-size: 16px;
+    line-height: 140%;
+    color: #131316;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Ellipse 3- piechart */
+.main .referrals .referral-data .referral-chart{
+position: absolute;
+width: 160.56px;
+height: 160.56px;
+left: 299.38px;
+top: 100.59px;
+background: #844FF6;
+}
+
+/* Frame 456- top referral source */
+.main .referrals{
+box-sizing: border-box;
+position: absolute;
+width: 500px;
+height: 326px;
+left: 878px;
+top: 843px;
+background: #FFFFFF;
+border: 1px solid #EFF1F6;
+border-radius: 12px;
+}
+
+/* Top Referral source */
+
+.main .referrals .report-title h3 {
+position: absolute;
+width: 154px;
+height: 24px;
+left: 24px;
+top: 24px;
+font-family: 'Söhne';
+font-size: 18px;
+line-height: 24px;
+letter-spacing: -0.015em;
+color: #131316;
+}
+
+/* Text Button-view analytic */
+.main .referrals .report-title p {
+width: 101px;
+height: 22px;
+font-family: 'Söhne';
+font-size: 14px;
+line-height: 22px;
+display: flex;
+align-items: center;
+color: #FF5403;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+/* Facebook 50% */
+
+#referralChart {
+width: 105px;
+height: 24px;
+font-family: 'Söhne';
+font-size: 16px;
+line-height: 140%;
+color: #131316;
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+/* Ellipse 2 */
+
+.main .referrals .referral-data .referral-chart {
+    position: absolute;
+    width: 160.56px;
+    height: 160.56px;
+    left: 299.38px;
+    top: 100.59px;
+    background: #599EEA;
+}
+
+/* Dashboard side bar */
+.container .sidebar h3 {
+    width: 80px;
+    height: 24px;
+    font-family: 'Söhne';
+    font-size: 16px;
+    line-height: 24px;
+    color: #FF5403;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* item1*/
+
+.container .sidebar p {
+width: 42px;
+height: 24px;
+font-family: 'Söhne';
+font-size: 16px;
+line-height: 24px;
+color: #4D5760;
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+/* other1 */
+.container .sidebar h4 {
+position: absolute;
+width: 57px;
+height: 16px;
+left: 60px;
+top: 204px;
+font-family: 'Söhne';
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.04em;
+color: #4D5760;
+}
+
+
+/* Blessing Daniels */
+
+
+/* position: absolute;
+width: 111px;
+height: 16px;
+left: 104px;
+top: 816px;
+font-family: 'Söhne';
+font-size: 15px;
+line-height: 16px;
+color: #4D5760; */
+

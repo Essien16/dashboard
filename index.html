@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link rel="stylesheet" href="style.css"> -->
+<title>Dashboard</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+    }
+    .sidebar {
+        width: 15%;
+        background-color: #f0f0f0;
+        padding: 1rem;
+    }
+    .main {
+        width: 85%;
+        padding: 1rem;
+    }
+    .greeting {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        margin-right: 1rem;
+    }
+    .summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .time-range {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+    .graph {
+        margin-bottom: 2rem;
+    }
+    .report {
+        display: flex;
+        justify-content: space-between;
+    }
+    .locations, .referrals {
+    width: 48%;
+    }
+
+    .location-data, .referral-data {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .report-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <!-- Insert your logo here -->
+        <p><img src="mainstack.png"></p>
+        <h3>Dashboard</h3>
+        <p>Item 1</p>
+        <p>Item 2</p>
+        <p>Item 3</p>
+        <h4>Others1</h3>
+        <p>Item 4</p>
+        <p>Item 5</p>
+        <h4>Others2</h4>
+        <p>Item 6</p>
+        <p>Item 7</p>
+        <p>Item 8</p>
+        <br>
+        <br>
+        <br>
+        <h4>Blessing Daniels</h4>
+    </div>
+    <div class="main">
+        <div> <h3>Dashboard</h3></div>
+        <div class="greeting">
+            <div class="logo"><!-- Insert your logo here --></div>
+            <h2>Good morning, Blessing ⛅️</h2>
+        </div>
+        <div class="summary">
+            <p>Check out your dashboard summary</p>
+            <h6>View analytics</h6>
+        </div>
+        <div class="time-range">
+            <button><p>1 day</p></button> 
+            <button>3 days</button>
+            <button>7 days</button>
+            <button>All Time</button>
+            <button>Custom Date</button>
+        </div>
+        <div class="page-view">
+            <h3>Page Views</h3>
+            <p>All time</p>
+            <h1>500</h1>
+            <div class="graph">
+                <!-- Insert the line graph here -->
+                <div class="graph">
+                    <canvas id="lineChart"></canvas>
+                </div>            
+            </div>
+        </div>
+        <div class="report">
+            <div class="locations">
+                <div class="report-title">
+                    <h3>Top Locations</h3>
+                    <p>view full reports</p>
+                </div>
+                <div class="location-data">
+                    <div class="location-list">
+                        <!-- List of locations -->
+                    </div>
+                    <div class="location-chart">
+                        <!-- Pie chart -->
+                        <canvas id="locationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="referrals">
+                <div class="report-title">
+                    <h3>Top Referral Sources</h3>
+                    <p>view full reports</p>
+                </div>
+                <div class="referral-data">
+                    <div class="referral-list">
+                        <!-- List of referrals -->
+                    </div>
+                    <div class="referral-chart">
+                        <!-- Pie chart -->
+                        <canvas id="referralChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+</body>
+<script>
+    const locationData = {
+    labels: ['Nigeria', 'US', 'Netherlands', 'Andorra', 'Others'],
+    values: [50, 24, 24, 24, 24],
+    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#E7E9ED'],
+    logoURLs: ['path/to/location_logo1.svg', 'path/to/location_logo2.svg', 'path/to/location_logo3.svg', 'path/to/location_logo4.svg', 'path/to/location_logo5.svg'],
+};
+
+const referralData = {
+    labels: ['Facebook', 'Instagram', 'LinkedIn', 'Twitter', 'Others'],
+    values: [50, 24, 24, 24, 24],
+    backgroundColor: ['#3B5998', '#E1306C', '#0077B5', '#1DA1F2', '#E7E9ED'],
+    logoURLs: ['path/to/referral_logo1.svg', 'path/to/referral_logo2.svg', 'path/to/referral_logo3.svg', 'path/to/referral_logo4.svg', 'path/to/referral_logo5.svg'],
+};
+
+function createListElements(data) {
+    const listElements = data.labels.map((label, index) => {
+        const listItem = document.createElement('p');
+        
+        const logo = document.createElement('span');
+        logo.className = 'logo';
+        // Use the corresponding logo URL for each item
+        logo.innerHTML = `<img src="${data.logoURLs[index]}" alt="" width="16" height="16">`;
+        listItem.appendChild(logo);
+
+        const text = document.createElement('span');
+        text.textContent = ` ${label}: ${data.values[index]}%`;
+        text.style.color = data.backgroundColor[index];
+        listItem.appendChild(text);
+
+        return listItem;
+    });
+
+    return listElements;
+}
+
+
+const locationList = document.querySelector('.location-list');
+const locationListItems = createListElements(locationData);
+locationListItems.forEach((listItem) => {
+    locationList.appendChild(listItem);
+});
+
+const referralList = document.querySelector('.referral-list');
+const referralListItems = createListElements(referralData);
+referralListItems.forEach((listItem) => {
+    referralList.appendChild(listItem);
+});
+
+const locationCtx = document.getElementById('locationChart').getContext('2d');
+const referralCtx = document.getElementById('referralChart').getContext('2d');
+const locationPieChart = new Chart(locationCtx, {
+    type: 'pie',
+    data: {
+        labels: locationData.labels,
+        datasets: [{
+            data: locationData.values,
+            backgroundColor: locationData.backgroundColor
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        }
+    }
+});
+
+const referralPieChart = new Chart(referralCtx, {
+    type: 'pie',
+    data: {
+        labels: referralData.labels,
+        datasets: [{
+            data: referralData.values,
+            backgroundColor: referralData.backgroundColor
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        }
+    }
+});
+
+
+</script>
+<script>
+    const ctx = document.getElementById('lineChart').getContext('2d');
+    const lineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['0', '18 Dec', '19 Dec', '20 Dec', '21 Dec', '22 Dec', '23 Dec', '24 Dec'],
+            datasets: [{
+                label: 'Page Views',
+                data: [0, 900, 400, 600, 800, 1000],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+</html>
